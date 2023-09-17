@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Janya Mehta Portfolio Website </title>
+ <link rel="stylesheet" href="style.css">
+ <script src="https://kit.fontawesome.com/2d655404fd.js" crossorigin="anonymous"></script>
+</head>
+<body>
+ <div id="header">
+  <div class="container">
+   <nav>
+    <img src="images/logo.png" class="logo">
+    <ul id="sidemenu">
+     <li><a href="#header">Home</a></li>
+     <li><a href="#about">About</a></li>
+     <li><a href="#projects">Projects</a></li>
+     <li><a href="#contact">Contact</a></li>
+     <i class="fa-solid fa-times" onclick="closemenu()"></i>
+    </ul>
+  <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+   </nav>
+
+   <div class="header-text">
+    <p>Software Developer</p>
+    <h1>Hi,I'm <span>Janya</span> Mehta <br>From India</h1>
+   </div>
+  </div>
+ </div>
+<!-----------------about---------------->
+ <div id="about">
+
+  <div class="container">
+<div class="row">
+ <div class="about-col-1">
+
+  <img src="images/user.png">
+ </div>
+ <div class="about-col-2">
+  <h1 class="sub-title">About Me</h1>
+  <p>Hey,I'm Janya Mehta an engineering graduate from Bharati Vidyapeeth College Of Egineering,Delhi India.I'm trying to secure a challenging position in a reputable organization to expand my learnings, knowledge, and skills.</p>
+
+<div class="tab-titles">
+ <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+ <p class="tab-links" onclick="opentab('education')">Education</p>
+ <p class="tab-links" onclick="opentab('trainings')">Trainings</p>
+</div>
+
+<div class="tab-contents active-tab" id="skills">
+<ul>
+ <li><span>Languages</span><br>C, C++, Python, MySQL, Java</li>
+ <li><span>Web Development</span><br>HTML, CSS, Javascript, Bootstrap, React.JS</li>
+ <li><span>Platforms</span><br>Windows, AWS</li>
+
+</ul>
+</div>
+
+
+<div class="tab-contents" id="education">
+ <ul>
+  <li><span>Bharati Vidyapeeth College Of Engineering,New Delh</span><br>B.Tech. - Computer Science & Engineering | CGPA: 9.20 / 10.00<br>2019 - 2023
+</li>
+  <li><span>CHANDRAM PUBLIC SCHOOL, NEW DELHI, Delhi</span><br>12th | CBSE | Percentage: 90.40/100.00<br>2019
+</li>
+  <li><span>OP JINDAL MODERN SCHOOL ,HISAR, HARYANA</span><br>10th | CBSE | CGPA: 10.00 / 10.00<br>2017</li>
+ </ul>
+</div>
+
+<div class="tab-contents" id="trainings">
+ <ul>
+   <li><span>Machine Learning</span><br>Jul. 18, 2022 - Aug 15, 2022 <br>Key Skills: Machine Learning, Artificial Intelligence,Deep Learning,Ensemble Learning,Tensorflow, Python,Libraries</li>
+ <li><span>The Complete Web Developer: Zero to Mastery</span><br>Sep. 21, 2022 - March 1, 2022 <br>Key Skills: HTML, CSS, JavaScript,Bootstrap,React.JS,Node.js
+ </li>
+ <li><span>Cloud Computing</span><br>July 19, 2021 - Aug. 21, 2021 <br>Key Skills: Cloud Computing, AWS, Microsoft Azure
+ </li>
+ <li><span>Data Structures and Algorithms</span><br>December 15, 2019 - March. 5, 2020 <br>Key Skills: Data Structures, Algorithms
+ </li>
+ </ul>
+</div>
+ </div>
+</div>
+  </div>
+ </div>
+
+
+<!------------------projects----------------->
+<div id="projects">
+ <div class="container">
+<h1 class="sub-title">My Projects</h1>
+<div class="projects-list">
+
+ <div class="project"> 
+
+  <img src="images/dementia.jpg">
+   <div class="layer">
+     <h3>Detection of Dementia through Hyper parameters optimization Techniques Of Machine Learning</h3>
+     <p>Various Machine Learning algorithms, their tuned hyperparamters combiations,their ensembling combinations are used to
+      detect wether person is demented or not. A user interface is created for the same</p>
+     <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+   </div>
+ </div>
+
+ <div class="project">
+  <img src="images/face.png">
+  <div class="layer">
+   <h3>Real Time Face Emotion Recognition by Transfer Learning</h3>
+   <p>Real-time camera application to recogonize facial expression i.e emotions shown by humans</p>
+   <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+  </div>
+ </div>
+
+ <div class="project">
+  <img src="images/object.png">
+  <div class="layer">
+   <h3>Object-Detection-using-Open-CV</h3>
+   <p>OpenCV, the open-source library isused for computer vision, machine learning, and image processing and Harr Cascades
+    for detecting objects. </p>
+   <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+  </div>
+ </div>
+ 
+ <!-----
+ <div class="project">
+  <img src="images/cloud.jpg">
+  <div class="layer">
+   <h3>Network Management with AWS using Virtual Private Cloud</h3>
+   <p>Amazon Virtual Private Cloud,launch AWS resources in a logically isolated virtual network that are defined.</p>
+   <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+  </div>
+ </div>
+
+ <div class="project">
+  <img src="images/robofrnds.png">
+ <div class="layer">
+  <h3>RoboFriends</h3>
+   <p>Robo Friends is a ReactJS web application that is a Card UI and has different robot information in card form and we can search dynamically through those cards by name of the robot</p>
+   <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+ </div>
+ </div>
+--->
+
+</div>
+<a href="#"class="btn">See More</a>
+ </div>
+</div>
+<!---------contact --------------------------->
+<div id="contact">
+ <div class="container">
+<div class="row">
+
+ <div class="contact-left">
+<h1 class="sub-title">Contact Me</h1>
+<p><i class="fa-solid fa-paper-plane"></i>janyamehta75@gmail.com</p>
+<div class="social-icons">
+
+ <a href="https://www.linkedin.com/in/janya-mehta-279215192"><i class="fa-brands fa-linkedin"></i></a>
+ <a href="https://github.com/JanyaMehta"> <i class="fa-brands fa-github"></i></a>
+ <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+</div>
+<a href="images/my-cv.pdf " download class="btn btn2">Download Resume</a>
+ </div>
+ <div class="contact-right">
+ <form name="submit-to-google-sheet">
+  <input type="text" name="Name" placeholder="Your Name" required>
+  <input type="email" name="email" placeholder="Your Email" required>
+  <textarea name="Message" rows= "6" placeholder="Your Message" required></textarea>
+  <button type="submit" class="btn btn2">Submit</button>
+ </form>
+ <span id="msg"></span>
+ </div>
+</div>
+ </div>
+ <div class="copyright">
+  <p>Copyright ©️ Janya Mehta. Made with <i class="fa-solid fa-heart"></i></p>
+ </div>
+</div>
+ <script src="script.js"></script>
+ <script>
+  var sidemeu = document.getElementById("sidemenu");
+
+    function openmenu() {
+      sidemeu.style.right = "0";
+    }
+
+    function closemenu() {
+      sidemeu.style.right = "-200px";
+    }
+
+ </script>
+ <script>
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbx5eNGcYAuL5MKVk6si4l0y84aIJn4eZ1xf0dAaxLq5QD0vdRrL1KR0OmujglFWueGt/exec'
+
+  const form = document.forms['submit-to-google-sheet']
+  const msg= document.getElementById("msg")
+  
+
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+      .then(response => {
+        msg.innerHTML="Message sent successfully"
+        setTimeout(function(){
+          msg.innerHTML=""
+        },5000)
+        form.reset()
+      })
+      .catch(error => console.error('Error!', error.message))
+  })
+</script>
+</body>
+</html>
