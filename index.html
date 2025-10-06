@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio Website</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+  <style>
+    /* Smooth scroll */
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /* Ensure padding is added to body to avoid content being hidden behind the navbar */
+    body {
+      padding-top: 56px;
+      background-color: #121212;
+      color: #e0e0e0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    /* Headings Color */
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      color: #ffffff;
+      font-weight: 600;
+    }
+
+    /* Section Styling */
+    .section-dark {
+      background-color: #1e1e1e;
+    }
+
+    .section-darker {
+      background-color: #121212;
+    }
+
+    /* --- Final Corrected Navbar Styles --- */
+.navbar {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    background-color: #343a40;
+}
+
+/* Increased specificity by adding .navbar-dark */
+.navbar-dark .navbar-nav .nav-link {
+    color: #f0f0f0;
+    padding-bottom: 5px; /* Space for the underline */
+    border-bottom: 2px solid transparent; /* Hidden underline */
+    transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+/* This more specific rule will now override Bootstrap's default hover color */
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link.active {
+    color: #f2c94c; /* Yellow color */
+    border-bottom-color: #f2c94c; /* Yellow underline */
+}
+
+@media (max-width: 992px) {
+    .navbar-collapse {
+        background-color: #343a40;
+    }
+}
+/* --- New Home Section Styles --- */
+.home-section {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Aligns content to the left */
+    min-height: 95vh;
+    background-color: #000; /* Pitch black background */
+    text-align: left;
+}
+
+.home-section .home-content {
+    padding-left: 15px; /* Adds some space from the edge */
+}
+
+.home-section .greeting {
+    color: #e0e0e0;
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-bottom: 5px;
+    letter-spacing: 2px;
+}
+
+.home-section h1 {
+    font-size: clamp(3rem, 8vw, 6rem); /* Responsive font size */
+    font-weight: 800;
+    line-height: 1.1;
+    color: #ffffff;
+    margin-bottom: 0;
+}
+
+.home-section h1 .highlight-name {
+    color: #f2c94c; /* Yellow for the first name */
+}
+
+.home-section .role {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 600;
+    color: #ffffff;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.home-section .job-title {
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+    font-weight: 300;
+    color: #cccccc;
+    margin-bottom: 40px;
+}
+
+/* Custom buttons for home section */
+.btn-home-youtube {
+    background-color: #f2c94c;
+    border-color: #f2c94c;
+    color: #212529; /* Dark text for contrast */
+    padding: 10px 30px;
+    font-size: 1rem;
+    border-radius: 50px; /* Pill shape */
+    font-weight: 700;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.btn-home-youtube:hover {
+    background-color: #e0b840;
+    border-color: #e0b840;
+    color: #212529;
+    transform: translateY(-2px);
+}
+
+.btn-home-myworks {
+    background-color: transparent;
+    border: 2px solid #f2c94c;
+    color: #f2c94c;
+    padding: 10px 30px;
+    font-size: 1rem;
+    border-radius: 50px; /* Pill shape */
+    font-weight: 700;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.btn-home-myworks:hover {
+    background-color: #f2c94c;
+    color: #212529; /* Dark text on hover */
+    transform: translateY(-2px);
+}
+/* --- New Home Section Styles (Centrally Aligned) --- */
+.home-section {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Aligns content to the center */
+    min-height: 95vh;
+    background-color: #000; /* Pitch black background */
+    text-align: center; /* Center-aligns all text within the section */
+}
+
+.home-section .home-content {
+    /* No special styles needed now, the section handles alignment */
+    padding: 0 15px; /* Keeps some padding on small screens */
+}
+
+    
+    /*  SECTION --- */
+    .about-section {
+      padding: 80px 0;
+      background-color: #000000;
+      color: #f0f0f0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .profile-image {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      border: 4px solid #f2c94c;
+      object-fit: cover;
+      margin-bottom: 20px;
+    }
+
+    .profile-details h3 {
+      font-size: 1.8rem;
+      color: #ffffff;
+      margin-bottom: 10px;
+    }
+
+    .profile-details p {
+      font-size: 1rem;
+      color: #a0a0a0;
+      margin-bottom: 5px;
+    }
+
+    .skills-list {
+      margin-top: 40px;
+    }
+
+    .skills-list h3 {
+      color: #ffffff;
+    }
+
+    .skill-item {
+      margin-bottom: 20px;
+    }
+
+    .skill-item p {
+      margin-bottom: 8px;
+      font-weight: 600;
+      font-size: 1rem;
+      color: #ffffff;
+    }
+
+    .progress {
+      background-color: #333;
+      border-radius: 6px;
+      height: 10px;
+    }
+
+    .progress-bar {
+      background-color: #f2c94c;
+      transition: width 1s ease-in-out;
+      /* Added transition for smooth animation */
+    }
+
+    .about-content {
+      position: relative;
+      z-index: 2;
+    }
+
+    .about-content h3 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 20px;
+    }
+
+    .about-content>p {
+      font-size: 1.1rem;
+      line-height: 1.7;
+      color: #cccccc;
+      margin-bottom: 30px;
+    }
+
+    .about-info-grid p {
+      margin-bottom: 15px;
+      font-size: 1rem;
+    }
+
+    .about-info-grid strong {
+      color: #f2c94c;
+      min-width: 120px;
+      display: inline-block;
+      font-weight: 600;
+    }
+
+    .background-heading {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: clamp(5rem, 12vw, 12rem);
+      font-weight: 800;
+      color: rgba(255, 255, 255, 0.04);
+      z-index: 1;
+      pointer-events: none;
+      white-space: nowrap;
+    }
+
+    @media (max-width: 991.98px) {
+
+      .profile-details,
+      .skills-list {
+        text-align: center;
+      }
+
+      .profile-image {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .background-heading {
+        font-size: clamp(6rem, 18vw, 10rem);
+        top: 5%;
+      }
+    }
+
+    /* CSS for Other Sections */
+    .projects-section,
+    .skills-section,
+    .resume-section {
+      padding: 50px 0;
+    }
+
+    .projects-section h2,
+    .skills-section h2,
+    .resume-section h2 {
+      margin-bottom: 40px;
+      font-size: 2.5rem;
+    }
+
+    .card {
+      background-color: #2a2a2e;
+      border: 1px solid #444;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    .card-title {
+      color: #f2c94c;
+    }
+
+    .card-text {
+      color: #ced4da;
+    }
+
+    .card-img-top {
+      max-height: 180px;
+      object-fit: cover;
+    }
+
+    .skills-section .card-img-top {
+      padding: 20px;
+      background-color: #343a40;
+      height: 180px;
+      object-fit: contain;
+    }
+/* --- Updated Button Styles (Rounded) --- */
+.btn-primary {
+    background-color: #f2c94c;
+    border-color: #f2c94c;
+    color: #212529; /* Dark text for better contrast */
+    font-weight: 600;
+    border-radius: 50px; /* This makes the buttons rounded */
+    padding: 8px 20px;
+}
+
+.btn-primary:hover {
+    background-color: #e0b840;
+    border-color: #d3ae3c;
+    color: #212529;
+}
+
+.btn-secondary {
+    background-color: transparent;
+    border-color: #f2c94c;
+    color: #f2c94c;
+    font-weight: 600;
+    border-radius: 50px; /* This makes the buttons rounded */
+    padding: 8px 20px;
+}
+
+.btn-secondary:hover {
+    background-color: #f2c94c;
+    border-color: #f2c94c;
+    color: #212529; /* Dark text on hover */
+}
+
+
+/* --- Updated Card Style (With Hover Animation) --- */
+.card {
+    background-color: #2a2a2e;
+    border: 1px solid #444;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    /* Added transition for the hover effect */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    /* Lifts the card up slightly */
+    transform: translateY(-10px);
+    /* Adds a subtle yellow glow to match your theme */
+    box-shadow: 0 8px 25px rgba(242, 201, 76, 0.2);
+}
+    /* Resume Section */
+    .resume-item {
+      background: #2a2a2e;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-left: 3px solid #f2c94c;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    }
+
+    .resume-item h4 {
+      color: #f2c94c;
+    }
+
+    .resume-item h5 {
+      background-color: #343a40;
+      padding: 5px 10px;
+      display: inline-block;
+      margin-bottom: 10px;
+      color: #f8f9fa;
+    }
+
+    /* Contact Section */
+    .contact-section {
+      padding: 50px 0;
+      background-color: #000;
+    }
+
+    .contact-section h2 {
+      font-size: 2.5rem;
+      margin-bottom: 40px;
+    }
+
+    .contact-section p {
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+    }
+
+    .social-icon {
+      width: 50px;
+      margin-bottom: 10px;
+      transition: transform 0.2s ease-in-out;
+    }
+
+    .social-icon:hover {
+      transform: scale(1.1);
+    }
+
+    .contact-section a {
+      color: #fff;
+      text-decoration: none;
+      display: inline-block;
+      margin-bottom: 10px;
+    }
+
+    .contact-section a:hover {
+      color: #f2c94c;
+    }
+
+    /* Animation CSS */
+    .animated-card,
+    .animated-section-content {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+
+    .animated-card.visible,
+    .animated-section-content.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+
+<body data-spy="scroll" data-target="#navbarNav" data-offset="70">
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#home"> Janya Mehta</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+          <li class="nav-item"><a class="nav-link" href="#resume">Experience</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <section id="home" class="home-section">
+    <div class="container home-content">
+      <p class="greeting">Hi,</p>
+      <h1>I'm <span class="highlight-name">Janya Mehta</span></h1>
+      <h5 class="job-title">Data Analyst | ETL, SQL, Python, Power BI & Data Visualization Expert</h5>
+
+      <div class="home-buttons mt-4">
+        <a href="#projects" class="btn btn-home-myworks btn-lg ml-3">MY WORK</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="about-section section-dark py-5">
+    <div class="container">
+      <div class="row align-items-center">
+
+        <div class="col-lg-5 mb-5 mb-lg-0 animated-section-content">
+          <div class="profile-details text-center text-lg-left">
+            <img src="images/about/1.jpg" alt="Janya Mehta" class="profile-image mb-3">
+            <h3 class="mb-1">Janya Mehta</h3>
+            <p class="text-white-50">Role: Data Analyst</p>
+            <p class="text-white-50">Experience: 1 Year 6 Months</p>
+            <p class="text-white-50">Location: Bengaluru, India</p>
+          </div>
+
+          <div class="skills-list mt-5">
+            <h3 class="mb-4 text-center text-lg-left">Skills</h3>
+            <div class="skill-item">
+              <p class="mb-1">SQL 95%</p>
+              <div class="progress" style="height: 8px;">
+                <div class="progress-bar" role="progressbar" style="width: 0%;" data-width="95"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <p class="mb-1">PYTHON 85%</p>
+              <div class="progress" style="height: 8px;">
+                <div class="progress-bar" role="progressbar" style="width: 0%;" data-width="85"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <p class="mb-1">Data Visualization (Power BI / Tableau) 90%</p>
+              <div class="progress" style="height: 8px;">
+                <div class="progress-bar" role="progressbar" style="width: 0%;" data-width="90"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <p class="mb-1">Statistical Analysis 85%</p>
+              <div class="progress" style="height: 8px;">
+                <div class="progress-bar" role="progressbar" style="width: 0%;" data-width="85"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <p class="mb-1">Excel / Advanced Excel 85%</p>
+              <div class="progress" style="height: 8px;">
+                <div class="progress-bar" role="progressbar" style="width: 0%;" data-width="80"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <p class="mb-1">Machine Learning 70%</p>
+              <div class="progress" style="height: 8px;">
+                <div class="progress-bar" role="progressbar" style="width: 0%;" data-width="80"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-7 position-relative animated-section-content">
+          <h2 class="background-heading">About Me</h2>
+
+          <div class="about-content">
+            <h3 class="font-weight-bold mb-4">About Me</h3>
+            <p class="text-white-50 mb-4">I am a passionate Data Analyst with experience in extracting, transforming, and loading (ETL) data, creating insightful
+            dashboards, and delivering actionable business intelligence. Skilled in SQL, Python, Excel, and ETL processes, I create
+            interactive dashboards and data visualizations using Power BI. I specialize in turning complex datasets into clear
+            visualizations and strategic insights and supporting data-driven decision-making for business growth. My portfolio
+            demonstrates practical projects that showcase my ability to handle real-world analytics problems.</p>
+
+            <div class="about-info-grid">
+              <p><strong>Profile:</strong> Data Science & Analytics</p>
+              <p><strong>Domain:</strong> Financial, Banking, Retail, Insurance, Ecommerce</p>
+              <p><strong>Education:</strong> Bachelor of Technology(Computer Science)</p>
+              <p><strong>Language:</strong> English, Hindi</p>
+              <p><strong>BI Tools:</strong> Microsoft Power BI,Tableau</p>
+              <p><strong>Other Skills:</strong> SQL, Python, Excel, ETL, Data Visualization, Statistical Analysis
+              </p>
+              <p><strong>Core Competencies:</strong> Analytics Projects, Dashboard Design, Data-driven Problem Solving</p>
+              <p><strong>Interests:</strong> Traveling, Reading, Learning New Technologies</p>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="projects" class="projects-section section-darker">
+    <div class="container">
+      <h2 class="text-center">Projects</h2>
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <div class="card animated-card">
+            <img src="images/projects/1.jpg" class="card-img-top" alt="Project 1">
+            <div class="card-body">
+              <h5 class="card-title">Project 1</h5>
+              <p class="card-text">Description of the project and the technologies used.</p>
+              <a href="#" class="btn btn-primary">Blog Post</a>
+              <a href="#" class="btn btn-secondary">Source Code</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card animated-card">
+            <img src="images/projects/2.jpg" class="card-img-top" alt="Project 2">
+            <div class="card-body">
+              <h5 class="card-title">Project 2</h5>
+              <p class="card-text">Description of the project and the technologies used.</p>
+              <a href="#" class="btn btn-primary">Blog Post</a>
+              <a href="#" class="btn btn-secondary">Source Code</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card animated-card">
+            <img src="images/projects/3.jpg" class="card-img-top" alt="Project 3">
+            <div class="card-body">
+              <h5 class="card-title">Project 3</h5>
+              <p class="card-text">Description of the project and the technologies used.</p>
+              <a href="#" class="btn btn-primary">Blog Post</a>
+              <a href="#" class="btn btn-secondary">Source Code</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row justify-content-center">
+        <div class="col-md-4 mb-4">
+          <div class="card animated-card">
+            <img src="images/projects/3.jpg" class="card-img-top" alt="Project 4">
+            <div class="card-body">
+              <h5 class="card-title">Project 4</h5>
+              <p class="card-text">Description of the project and the technologies used.</p>
+              <a href="#" class="btn btn-primary">Blog Post</a>
+              <a href="#" class="btn btn-secondary">Source Code</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 mb-4">
+          <div class="card animated-card">
+            <img src="images/projects/3.jpg" class="card-img-top" alt="Project 5">
+            <div class="card-body">
+              <h5 class="card-title">Project 5</h5>
+              <p class="card-text">Description of the project and the technologies used.</p>
+              <a href="#" class="btn btn-primary">Blog Post</a>
+              <a href="#" class="btn btn-secondary">Source Code</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="skills" class="skills-section section-dark">
+    <div class="container">
+      <h2 class="text-center">Skills</h2>
+      <div class="row">
+        <div class="col-lg-3 col-md-6 mb-4">
+          <div class="card animated-card">
+            <img src="images/skills/1.png" class="card-img-top" alt="Python">
+            <div class="card-body text-center">
+              <h5 class="card-title">Python</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4">
+          <div class="card animated-card">
+            <img src="images/skills/2.png" class="card-img-top" alt="Data Visualization">
+            <div class="card-body text-center">
+              <h5 class="card-title">Data Visualization</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4">
+          <div class="card animated-card">
+            <img src="images/skills/3.png" class="card-img-top" alt="SQL">
+            <div class="card-body text-center">
+              <h5 class="card-title">SQL</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4">
+          <div class="card animated-card">
+            <img src="images/skills/4.png" class="card-img-top" alt="Data Storytelling">
+            <div class="card-body text-center">
+              <h5 class="card-title">Data Storytelling</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="resume" class="resume-section section-darker">
+    <div class="container">
+      <h2 class="text-center">Experience</h2>
+      <div class="row">
+        <div class="col-md-8 offset-md-2">
+          <div class="resume-item animated-card">
+            <h4>Associate Software Enginner</h4>
+            <h5>2024 - Present</h5>
+            <p><em>Tata Consultancy Services, Bangalore, India</em></p>
+            <ul>
+              <li>Lead in the design, development, and implementation of the graphic, layout, and
+                production communication materials.</li>
+              <li>Delegate tasks to the 7 members of the design team and provide counsel on all aspects of
+                the project.
+              </li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+      <div class="text-center mb-5">
+        <a href="path/to/your/resume.pdf" class="btn btn-primary btn-lg" download>Download CV</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact-section text-center">
+    <div class="container">
+      <h2>Contact Me</h2>
+      <div class="row">
+        <div class="col-lg-6">
+          <p><i class="fas fa-envelope"></i> janyamehta75@gmail.com</p>
+        </div>
+        <div class="col-lg-6">
+          <p><i class="fas fa-phone"></i> 415xxxxxxx</p>
+        </div>
+      </div>
+      <div class="row justify-content-center mt-4">
+        <div class="col-lg-2 col-md-4 col-4 mb-4">
+          <a href="https://linkedin.com/in/yourusername" target="_blank">
+            <img src="icons/linkedin.png" alt="LinkedIn" class="social-icon">
+            <div>LinkedIn</div>
+          </a>
+        </div>
+        <div class="col-lg-2 col-md-4 col-4 mb-4">
+          <a href="https://twitter.com/yourusername" target="_blank">
+            <img src="icons/twitter.png" alt="Twitter" class="social-icon">
+            <div>Twitter</div>
+          </a>
+        </div>
+        <div class="col-lg-2 col-md-4 col-4 mb-4">
+          <a href="https://github.com/yourusername" target="_blank">
+            <img src="icons/github.png" alt="GitHub" class="social-icon">
+            <div>GitHub</div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // This enables Bootstrap's Scrollspy to highlight the nav links as you scroll
+      $('body').scrollspy({ target: '#navbarNav', offset: 70 });
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            // Add the 'visible' class to trigger the fade-in/slide-up animation
+            entry.target.classList.add('visible');
+
+            // Specifically check if the 'about' section is visible to animate progress bars
+            if (entry.target.id === 'about') {
+              const progressBars = document.querySelectorAll('#about .progress-bar');
+              progressBars.forEach(bar => {
+                const targetWidth = bar.getAttribute('data-width');
+                bar.style.width = targetWidth + '%';
+              });
+            }
+
+            // Stop observing the element once it has become visible
+            observer.unobserve(entry.target);
+          }
+        });
+      }, {
+        threshold: 0.15 // Trigger when 15% of the element is visible
+      });
+
+      // Target all sections and cards to be animated
+      const elementsToAnimate = document.querySelectorAll('.animated-card, .animated-section-content, #about');
+      elementsToAnimate.forEach(element => {
+        observer.observe(element);
+      });
+    });
+  </script>
+</body>
+
+</html>
