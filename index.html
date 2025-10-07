@@ -43,133 +43,152 @@
     }
 
     /* --- Final Corrected Navbar Styles --- */
-.navbar {
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
-    background-color: #343a40;
-}
-
-/* Increased specificity by adding .navbar-dark */
-.navbar-dark .navbar-nav .nav-link {
-    color: #f0f0f0;
-    padding-bottom: 5px; /* Space for the underline */
-    border-bottom: 2px solid transparent; /* Hidden underline */
-    transition: color 0.3s ease, border-color 0.3s ease;
-}
-
-/* This more specific rule will now override Bootstrap's default hover color */
-.navbar-dark .navbar-nav .nav-link:hover,
-.navbar-dark .navbar-nav .nav-link.active {
-    color: #f2c94c; /* Yellow color */
-    border-bottom-color: #f2c94c; /* Yellow underline */
-}
-
-@media (max-width: 992px) {
-    .navbar-collapse {
-        background-color: #343a40;
+    .navbar {
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+      background-color: #343a40;
     }
-}
-/* --- New Home Section Styles --- */
-.home-section {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start; /* Aligns content to the left */
-    min-height: 95vh;
-    background-color: #000; /* Pitch black background */
-    text-align: left;
-}
 
-.home-section .home-content {
-    padding-left: 15px; /* Adds some space from the edge */
-}
+    /* Increased specificity by adding .navbar-dark */
+    .navbar-dark .navbar-nav .nav-link {
+      color: #f0f0f0;
+      padding-bottom: 5px;
+      /* Space for the underline */
+      border-bottom: 2px solid transparent;
+      /* Hidden underline */
+      transition: color 0.3s ease, border-color 0.3s ease;
+    }
 
-.home-section .greeting {
-    color: #e0e0e0;
-    font-size: 1.2rem;
-    font-weight: 500;
-    margin-bottom: 5px;
-    letter-spacing: 2px;
-}
+    /* This more specific rule will now override Bootstrap's default hover color */
+    .navbar-dark .navbar-nav .nav-link:hover,
+    .navbar-dark .navbar-nav .nav-link.active {
+      color: #f2c94c;
+      /* Yellow color */
+      border-bottom-color: #f2c94c;
+      /* Yellow underline */
+    }
 
-.home-section h1 {
-    font-size: clamp(3rem, 8vw, 6rem); /* Responsive font size */
-    font-weight: 800;
-    line-height: 1.1;
-    color: #ffffff;
-    margin-bottom: 0;
-}
+    @media (max-width: 992px) {
+      .navbar-collapse {
+        background-color: #343a40;
+      }
+    }
 
-.home-section h1 .highlight-name {
-    color: #f2c94c; /* Yellow for the first name */
-}
+    /* --- New Home Section Styles --- */
+    .home-section {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      /* Aligns content to the left */
+      min-height: 95vh;
+      background-color: #000;
+      /* Pitch black background */
+      text-align: left;
+    }
 
-.home-section .role {
-    font-size: clamp(2rem, 5vw, 3.5rem);
-    font-weight: 600;
-    color: #ffffff;
-    margin-top: 20px;
-    margin-bottom: 10px;
-}
+    .home-section .home-content {
+      padding-left: 15px;
+      /* Adds some space from the edge */
+    }
 
-.home-section .job-title {
-    font-size: clamp(1.5rem, 4vw, 2.5rem);
-    font-weight: 300;
-    color: #cccccc;
-    margin-bottom: 40px;
-}
+    .home-section .greeting {
+      color: #e0e0e0;
+      font-size: 1.2rem;
+      font-weight: 500;
+      margin-bottom: 5px;
+      letter-spacing: 2px;
+    }
 
-/* Custom buttons for home section */
-.btn-home-youtube {
-    background-color: #f2c94c;
-    border-color: #f2c94c;
-    color: #212529; /* Dark text for contrast */
-    padding: 10px 30px;
-    font-size: 1rem;
-    border-radius: 50px; /* Pill shape */
-    font-weight: 700;
-    letter-spacing: 1px;
-    transition: all 0.3s ease;
-}
+    .home-section h1 {
+      font-size: clamp(3rem, 8vw, 6rem);
+      /* Responsive font size */
+      font-weight: 800;
+      line-height: 1.1;
+      color: #ffffff;
+      margin-bottom: 0;
+    }
 
-.btn-home-youtube:hover {
-    background-color: #e0b840;
-    border-color: #e0b840;
-    color: #212529;
-    transform: translateY(-2px);
-}
+    .home-section h1 .highlight-name {
+      color: #f2c94c;
+      /* Yellow for the first name */
+    }
 
-.btn-home-myworks {
-    background-color: transparent;
-    border: 2px solid #f2c94c;
-    color: #f2c94c;
-    padding: 10px 30px;
-    font-size: 1rem;
-    border-radius: 50px; /* Pill shape */
-    font-weight: 700;
-    letter-spacing: 1px;
-    transition: all 0.3s ease;
-}
+    .home-section .role {
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      font-weight: 600;
+      color: #ffffff;
+      margin-top: 20px;
+      margin-bottom: 10px;
+    }
 
-.btn-home-myworks:hover {
-    background-color: #f2c94c;
-    color: #212529; /* Dark text on hover */
-    transform: translateY(-2px);
-}
-/* --- New Home Section Styles (Centrally Aligned) --- */
-.home-section {
-    display: flex;
-    align-items: center;
-    justify-content: center; /* Aligns content to the center */
-    min-height: 95vh;
-    background-color: #000; /* Pitch black background */
-    text-align: center; /* Center-aligns all text within the section */
-}
+    .home-section .job-title {
+      font-size: clamp(1.5rem, 4vw, 2.5rem);
+      font-weight: 300;
+      color: #cccccc;
+      margin-bottom: 40px;
+    }
 
-.home-section .home-content {
-    /* No special styles needed now, the section handles alignment */
-    padding: 0 15px; /* Keeps some padding on small screens */
-}
+    /* Custom buttons for home section */
+    .btn-home-youtube {
+      background-color: #f2c94c;
+      border-color: #f2c94c;
+      color: #212529;
+      /* Dark text for contrast */
+      padding: 10px 30px;
+      font-size: 1rem;
+      border-radius: 50px;
+      /* Pill shape */
+      font-weight: 700;
+      letter-spacing: 1px;
+      transition: all 0.3s ease;
+    }
 
-    
+    .btn-home-youtube:hover {
+      background-color: #e0b840;
+      border-color: #e0b840;
+      color: #212529;
+      transform: translateY(-2px);
+    }
+
+    .btn-home-myworks {
+      background-color: transparent;
+      border: 2px solid #f2c94c;
+      color: #f2c94c;
+      padding: 10px 30px;
+      font-size: 1rem;
+      border-radius: 50px;
+      /* Pill shape */
+      font-weight: 700;
+      letter-spacing: 1px;
+      transition: all 0.3s ease;
+    }
+
+    .btn-home-myworks:hover {
+      background-color: #f2c94c;
+      color: #212529;
+      /* Dark text on hover */
+      transform: translateY(-2px);
+    }
+
+    /* --- New Home Section Styles (Centrally Aligned) --- */
+    .home-section {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      /* Aligns content to the center */
+      min-height: 95vh;
+      background-color: #000;
+      /* Pitch black background */
+      text-align: center;
+      /* Center-aligns all text within the section */
+    }
+
+    .home-section .home-content {
+      /* No special styles needed now, the section handles alignment */
+      padding: 0 15px;
+      /* Keeps some padding on small screens */
+    }
+
+
     /*  SECTION --- */
     .about-section {
       padding: 80px 0;
@@ -295,14 +314,18 @@
 
     /* CSS for Other Sections */
     .projects-section,
-    .skills-section,
-    .resume-section {
+    .services-section,
+    .certifications-section,
+    .resume-section 
+    {
       padding: 50px 0;
     }
 
     .projects-section h2,
-    .skills-section h2,
-    .resume-section h2 {
+    .services-section h2,
+    /* <-- Changed from skills-section */
+    .resume-section h2 ,
+    .certifications-section h2{
       margin-bottom: 40px;
       font-size: 2.5rem;
     }
@@ -317,68 +340,97 @@
       color: #f2c94c;
     }
 
+    .card-img-top {
+      width: 100%;
+      /* A common 16:9 aspect ratio for thumbnails, you can change it */
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+      /* This will crop the image to fit without distortion */
+    }
+
     .card-text {
       color: #ced4da;
+
+      /* --- Text Truncation Magic --- */
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      /* Show a maximum of 3 lines */
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      /* --- End of Magic --- */
     }
 
-    .card-img-top {
-      max-height: 180px;
-      object-fit: cover;
+    /* --- Services Section Tweaks --- */
+    .services-section .card-body {
+      padding: 1.5rem;
+      /* A bit more padding for the text */
     }
 
-    .skills-section .card-img-top {
-      padding: 20px;
-      background-color: #343a40;
-      height: 180px;
-      object-fit: contain;
+    .services-section .card-title {
+      margin-bottom: 1rem;
+      /* Adds space between title and paragraph */
     }
-/* --- Updated Button Styles (Rounded) --- */
-.btn-primary {
-    background-color: #f2c94c;
-    border-color: #f2c94c;
-    color: #212529; /* Dark text for better contrast */
-    font-weight: 600;
-    border-radius: 50px; /* This makes the buttons rounded */
-    padding: 8px 20px;
+   
+.services-section  .card-img-top {
+  padding: 20px;
+  background-color: #343a40;
+  height: 180px;
+  object-fit: contain;
 }
 
-.btn-primary:hover {
-    background-color: #e0b840;
-    border-color: #d3ae3c;
-    color: #212529;
-}
+    /* --- Updated Button Styles (Rounded) --- */
+    .btn-primary {
+      background-color: #f2c94c;
+      border-color: #f2c94c;
+      color: #212529;
+      /* Dark text for better contrast */
+      font-weight: 600;
+      border-radius: 50px;
+      /* This makes the buttons rounded */
+      padding: 8px 20px;
+    }
 
-.btn-secondary {
-    background-color: transparent;
-    border-color: #f2c94c;
-    color: #f2c94c;
-    font-weight: 600;
-    border-radius: 50px; /* This makes the buttons rounded */
-    padding: 8px 20px;
-}
+    .btn-primary:hover {
+      background-color: #e0b840;
+      border-color: #d3ae3c;
+      color: #212529;
+    }
 
-.btn-secondary:hover {
-    background-color: #f2c94c;
-    border-color: #f2c94c;
-    color: #212529; /* Dark text on hover */
-}
+    .btn-secondary {
+      background-color: transparent;
+      border-color: #f2c94c;
+      color: #f2c94c;
+      font-weight: 600;
+      border-radius: 50px;
+      /* This makes the buttons rounded */
+      padding: 8px 20px;
+    }
+
+    .btn-secondary:hover {
+      background-color: #f2c94c;
+      border-color: #f2c94c;
+      color: #212529;
+      /* Dark text on hover */
+    }
 
 
-/* --- Updated Card Style (With Hover Animation) --- */
-.card {
-    background-color: #2a2a2e;
-    border: 1px solid #444;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    /* Added transition for the hover effect */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
+    /* --- Updated Card Style (With Hover Animation) --- */
+    .card {
+      background-color: #2a2a2e;
+      border: 1px solid #444;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      /* Added transition for the hover effect */
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
 
-.card:hover {
-    /* Lifts the card up slightly */
-    transform: translateY(-10px);
-    /* Adds a subtle yellow glow to match your theme */
-    box-shadow: 0 8px 25px rgba(242, 201, 76, 0.2);
-}
+    .card:hover {
+      /* Lifts the card up slightly */
+      transform: translateY(-10px);
+      /* Adds a subtle yellow glow to match your theme */
+      box-shadow: 0 8px 25px rgba(242, 201, 76, 0.2);
+    }
+
     /* Resume Section */
     .resume-item {
       background: #2a2a2e;
@@ -400,42 +452,143 @@
       color: #f8f9fa;
     }
 
-    /* Contact Section */
+    /* --- New Contact Section Styling --- */
     .contact-section {
-      padding: 50px 0;
-      background-color: #000;
+      background-color: #1A1A1A;
+      /* A slightly lighter charcoal/off-black */
+      color: #fff;
+      padding: 80px 0;
+      /* ... other styles ... */
     }
 
-    .contact-section h2 {
-      font-size: 2.5rem;
-      margin-bottom: 40px;
+    .contact-title {
+      font-size: 3rem;
+      font-weight: 700;
+      margin-bottom: 10px;
     }
 
-    .contact-section p {
+    .contact-subtitle {
+      font-size: 1.1rem;
+      color: #aaa;
+    }
+
+    .contact-item {
+      margin-bottom: 30px;
+    }
+
+    /* The yellow icon circle */
+    .contact-icon {
+      width: 80px;
+      height: 80px;
+      background-color: #f2c94c;
+      /* Your yellow color */
+      border-radius: 50%;
+      margin: 0 auto 20px auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.3s ease;
+    }
+
+    .contact-item:hover .contact-icon {
+      transform: scale(1.1);
+      /* Nice hover effect */
+    }
+
+    /* The icon symbol inside the circle */
+    .contact-icon i {
+      font-size: 32px;
+      color: #121212;
+      /* Black icon symbol */
+    }
+
+    .contact-item h5 {
+      text-transform: uppercase;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: #aaa;
+      letter-spacing: 1px;
+    }
+
+    .contact-item p {
+      font-size: 1rem;
+      color: #fff;
+      font-weight: 300;
+    }
+
+    .contact-item p a {
+      color: #fff;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .contact-item p a:hover {
+      color: #f2c94c;
+      /* Link turns yellow on hover */
+    }
+
+    /* "Have a Question?" Section */
+    .question-text {
       font-size: 1.2rem;
       margin-bottom: 20px;
     }
 
-    .social-icon {
-      width: 50px;
-      margin-bottom: 10px;
-      transition: transform 0.2s ease-in-out;
-    }
-
-    .social-icon:hover {
-      transform: scale(1.1);
-    }
-
-    .contact-section a {
-      color: #fff;
+    .cta-button {
+      background-color: #f2c94c;
+      color: #121212;
+      padding: 12px 30px;
+      border-radius: 50px;
       text-decoration: none;
-      display: inline-block;
-      margin-bottom: 10px;
+      font-weight: 700;
+      transition: background-color 0.3s ease;
     }
 
-    .contact-section a:hover {
-      color: #f2c94c;
+    .cta-button:hover {
+      background-color: #fff;
+      color: #121212;
     }
+
+
+    /* Social Links at the bottom */
+    .find-me-text {
+      margin-bottom: 20px;
+      color: #aaa;
+    }
+
+    .social-footer-links a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 45px;
+      height: 45px;
+      background-color: #2a2a2e;
+      border-radius: 50%;
+      margin: 0 8px;
+      color: #f2c94c;
+      font-size: 20px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .social-footer-links a:hover {
+      background-color: #f2c94c;
+      color: #121212;
+      transform: translateY(-5px);
+    }
+
+/* --- 2x2 Staggered Grid for Certifications --- */
+@media (min-width: 768px) { /* Applies to tablets and larger */
+  .second-card-row {
+    margin-top: 50px;
+  }
+}
+/* --- Fix for Certification Section Icons --- */
+.certifications-section .card-img-top {
+  height: 180px;         /* Give a consistent, fixed height */
+  padding: 20px;         /* Add nice spacing around the icon */
+  object-fit: contain;   /* THE KEY: Fits the whole icon, no cropping */
+  aspect-ratio: auto;    /* Override the general 16/9 rule */
+}
 
     /* Animation CSS */
     .animated-card,
@@ -467,7 +620,7 @@
           <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
           <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
           <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-          <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+          <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
           <li class="nav-item"><a class="nav-link" href="#resume">Experience</a></li>
           <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
         </ul>
@@ -546,11 +699,15 @@
 
           <div class="about-content">
             <h3 class="font-weight-bold mb-4">About Me</h3>
-            <p class="text-white-50 mb-4">I am a passionate Data Analyst with experience in extracting, transforming, and loading (ETL) data, creating insightful
-            dashboards, and delivering actionable business intelligence. Skilled in SQL, Python, Excel, and ETL processes, I create
-            interactive dashboards and data visualizations using Power BI. I specialize in turning complex datasets into clear
-            visualizations and strategic insights and supporting data-driven decision-making for business growth. My portfolio
-            demonstrates practical projects that showcase my ability to handle real-world analytics problems.</p>
+            <p class="text-white-50 mb-4">I am a passionate Data Analyst with experience in extracting, transforming,
+              and loading (ETL) data, creating insightful
+              dashboards, and delivering actionable business intelligence. Skilled in SQL, Python, Excel, and ETL
+              processes, I create
+              interactive dashboards and data visualizations using Power BI. I specialize in turning complex datasets
+              into clear
+              visualizations and strategic insights and supporting data-driven decision-making for business growth. My
+              portfolio
+              demonstrates practical projects that showcase my ability to handle real-world analytics problems.</p>
 
             <div class="about-info-grid">
               <p><strong>Profile:</strong> Data Science & Analytics</p>
@@ -560,9 +717,10 @@
               <p><strong>BI Tools:</strong> Microsoft Power BI,Tableau</p>
               <p><strong>Other Skills:</strong> SQL, Python, Excel, ETL, Data Visualization, Statistical Analysis
               </p>
-              <p><strong>Core Competencies:</strong> Analytics Projects, Dashboard Design, Data-driven Problem Solving</p>
+              <p><strong>Core Competencies:</strong> Analytics Projects, Dashboard Design, Data-driven Problem Solving
+              </p>
               <p><strong>Interests:</strong> Traveling, Reading, Learning New Technologies</p>
-              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -573,58 +731,81 @@
   <section id="projects" class="projects-section section-darker">
     <div class="container">
       <h2 class="text-center">Projects</h2>
-      <div class="row">
+      <div class="row d-flex">
         <div class="col-md-4 mb-4">
-          <div class="card animated-card">
-            <img src="images/projects/1.jpg" class="card-img-top" alt="Project 1">
+          <div class="card animated-card h-100">
+            <img src="images/projects/1.png" class="card-img-top" alt="Project 1">
             <div class="card-body">
-              <h5 class="card-title">Project 1</h5>
-              <p class="card-text">Description of the project and the technologies used.</p>
-              <a href="#" class="btn btn-primary">Blog Post</a>
-              <a href="#" class="btn btn-secondary">Source Code</a>
+              <h5 class="card-title">Personal Finance Insights – Data Analytics Challenge</h5>
+              <p class="card-text">A comprehensive Excel-based analytics project designed to transform raw banking data
+                into actionable financial insights. This interactive dashboard automates transaction categorization,
+                visualizes key metrics, and enables dynamic filtering, empowering users to track expenses, analyze
+                saving
+                trends, and make informed financial decisions.</p>
+              <a href="https://www.linkedin.com/pulse/how-i-built-my-personal-finance-analytics-project-using-janya-mehta-r1qqc"
+                class="btn btn-primary">Blog Post</a>
+              <a href="https://github.com/JanyaMehta/Personal-Finance-Dashboard." class="btn btn-secondary">Source
+                Code</a>
             </div>
           </div>
         </div>
         <div class="col-md-4 mb-4">
-          <div class="card animated-card">
-            <img src="images/projects/2.jpg" class="card-img-top" alt="Project 2">
+          <div class="card animated-card h-100">
+            <img src="images/projects/2.png" class="card-img-top" alt="Project 2">
             <div class="card-body">
-              <h5 class="card-title">Project 2</h5>
-              <p class="card-text">Description of the project and the technologies used.</p>
-              <a href="#" class="btn btn-primary">Blog Post</a>
-              <a href="#" class="btn btn-secondary">Source Code</a>
+              <h5 class="card-title">Retail Performance Insights – Power BI Analytics Dashboard</h5>
+              <p class="card-text">An end-to-end business intelligence project focused on retail sales performance
+                analysis, designed to deliver actionable insights for revenue growth, product optimization, and
+                strategic
+                decision-making. This project transforms raw transactional data into a fully interactive Power BI
+                dashboard, enabling stakeholders to track key KPIs, monitor trends, and understand customer behavior in
+                real time.</p>
+              <a href="https://www.linkedin.com/pulse/from-raw-data-actionable-insights-building-dynamic-shopmart-mehta-yn7zc"
+                class="btn btn-primary">Blog Post</a>
+              <a href="https://github.com/JanyaMehta/ShopMart-Sales-Analysis-Dashboard" class="btn btn-secondary">Source
+                Code</a>
             </div>
           </div>
         </div>
         <div class="col-md-4 mb-4">
-          <div class="card animated-card">
-            <img src="images/projects/3.jpg" class="card-img-top" alt="Project 3">
+          <div class="card animated-card h-100">
+            <img src="images/projects/3.png" class="card-img-top" alt="Project 3">
             <div class="card-body">
-              <h5 class="card-title">Project 3</h5>
-              <p class="card-text">Description of the project and the technologies used.</p>
-              <a href="#" class="btn btn-primary">Blog Post</a>
-              <a href="#" class="btn btn-secondary">Source Code</a>
+              <h5 class="card-title">SQL - Data Exploration & Data Cleaning.</h5>
+              <p class="card-text">This project focused on data exploration, cleaning, and insight generation using SQL.
+                This project consolidates
+                multiple real-world case studies from the renowned 8-Week SQL Challenge by Danny Ma, demonstrating
+                expertise in
+                transforming raw data into actionable business insights.</p>
+              <a href="https://www.linkedin.com/pulse/sqls-secret-weapon-simple-guide-window-functions-janya-mehta-3hbyc"
+                class="btn btn-primary">Blog Post</a>
+              <a href="https://github.com/JanyaMehta/sql-case-studies" class="btn btn-secondary">Source Code</a>
             </div>
           </div>
         </div>
       </div>
 
-      <div class="row justify-content-center">
+      <div class="row justify-content-center d-flex">
         <div class="col-md-4 mb-4">
-          <div class="card animated-card">
-            <img src="images/projects/3.jpg" class="card-img-top" alt="Project 4">
+          <div class="card animated-card h-100">
+            <img src="images/projects/4.png" class="card-img-top" alt="Project 4">
             <div class="card-body">
-              <h5 class="card-title">Project 4</h5>
-              <p class="card-text">Description of the project and the technologies used.</p>
-              <a href="#" class="btn btn-primary">Blog Post</a>
-              <a href="#" class="btn btn-secondary">Source Code</a>
+              <h5 class="card-title">Interactive Insurance Dashboard – Real-Time Analytics with Power BI & SQL</h5>
+              <p class="card-text">The data analytics and business intelligence project focused on the insurance
+                domain, built by integrating PostgreSQL with Power BI to deliver actionable insights from real-world
+                insurance datasets. This project replicates an enterprise-grade analytics workflow, covering everything
+                from database integration and ETL to dynamic dashboard design, data security, and automation.</p>
+              <a href="https://www.linkedin.com/pulse/interactive-insurance-dashboard-power-bi-postgresql-janya-mehta-3mjfc"
+                class="btn btn-primary">Blog Post</a>
+              <a href="https://github.com/JanyaMehta/Insurance-Data-Dashboard-with-Power-BI-PostgreSQL"
+                class="btn btn-secondary">Source Code</a>
             </div>
           </div>
         </div>
 
         <div class="col-md-4 mb-4">
-          <div class="card animated-card">
-            <img src="images/projects/3.jpg" class="card-img-top" alt="Project 5">
+          <div class="card animated-card h-100">
+            <img src="images/projects/5.png" class="card-img-top" alt="Project 5">
             <div class="card-body">
               <h5 class="card-title">Project 5</h5>
               <p class="card-text">Description of the project and the technologies used.</p>
@@ -638,42 +819,61 @@
   </section>
 
 
-  <section id="skills" class="skills-section section-dark">
+  <section id="services" class="services-section section-dark">
     <div class="container">
-      <h2 class="text-center">Skills</h2>
+      <h2 class="text-center">Services</h2>
+      <p class="text-center lead mb-5">I help businesses unlock the power of their data by transforming complex
+        information into strategic assets.</p>
       <div class="row">
+
         <div class="col-lg-3 col-md-6 mb-4">
-          <div class="card animated-card">
-            <img src="images/skills/1.png" class="card-img-top" alt="Python">
-            <div class="card-body text-center">
-              <h5 class="card-title">Python</h5>
+          <div class="card animated-card h-100">
+            <img src="images/services/1.png" class="card-img-top" alt="Business Intelligence & Dashboard Development">
+            <div class="card-body d-flex flex-column text-center">
+              <h5 class="card-title">Business Intelligence & Dashboard Development</h5>
+              <p class="card-text mt-2">I design and build intuitive, interactive dashboards in Power BI and Tableau.
+                Transform your raw data into actionable insights, track KPIs in real-time, and empower your team to make
+                data-driven decisions confidently.</p>
             </div>
           </div>
         </div>
+
         <div class="col-lg-3 col-md-6 mb-4">
-          <div class="card animated-card">
-            <img src="images/skills/2.png" class="card-img-top" alt="Data Visualization">
-            <div class="card-body text-center">
-              <h5 class="card-title">Data Visualization</h5>
+          <div class="card animated-card h-100">
+            <img src="images/services/2.png" class="card-img-top" alt="Advanced Data Analysis & Insights">
+            <div class="card-body d-flex flex-column text-center">
+              <h5 class="card-title">Advanced Data Analysis & Insights</h5>
+              <p class="card-text mt-2">Go beyond surface-level metrics. I perform deep-dive statistical analysis,
+                customer segmentation, and A/B testing to uncover hidden patterns and opportunities that drive growth,
+                optimize marketing ROI, and improve operational efficiency.</p>
             </div>
           </div>
         </div>
+
         <div class="col-lg-3 col-md-6 mb-4">
-          <div class="card animated-card">
-            <img src="images/skills/3.png" class="card-img-top" alt="SQL">
-            <div class="card-body text-center">
-              <h5 class="card-title">SQL</h5>
+          <div class="card animated-card h-100">
+            <img src="images/services/3.png" class="card-img-top" alt="Predictive Modeling & Machine Learning">
+            <div class="card-body d-flex flex-column text-center">
+              <h5 class="card-title">Predictive Modeling & Machine Learning</h5>
+              <p class="card-text mt-2">Leveraging Python and machine learning frameworks, I build custom predictive
+                models to forecast sales, predict customer churn, and identify key drivers of your business. Turn
+                historical data into a powerful tool for future planning.</p>
             </div>
           </div>
         </div>
+
         <div class="col-lg-3 col-md-6 mb-4">
-          <div class="card animated-card">
-            <img src="images/skills/4.png" class="card-img-top" alt="Data Storytelling">
-            <div class="card-body text-center">
-              <h5 class="card-title">Data Storytelling</h5>
+          <div class="card animated-card h-100">
+            <img src="images/services/4.png" class="card-img-top" alt="Data Strategy & Actionable Reporting">
+            <div class="card-body d-flex flex-column text-center">
+              <h5 class="card-title">Data Strategy & Actionable Reporting</h5>
+              <p class="card-text mt-2">Data is useless without a story. I specialize in data storytelling, translating
+                complex findings into clear, compelling narratives and strategic recommendations for stakeholders,
+                ensuring insights lead to decisive action.</p>
             </div>
           </div>
         </div>
+
       </div>
     </div>
   </section>
@@ -704,37 +904,145 @@
     </div>
   </section>
 
-  <section id="contact" class="contact-section text-center">
+  <section id="certifications" class="certifications-section section-dark">
     <div class="container">
-      <h2>Contact Me</h2>
+      <h2 class="text-center">Courses & Certifications</h2>
+      <p class="text-center lead mb-5">A showcase of my commitment to continuous learning and skill development.</p>
+  
+      <div class="row justify-content-center">
+        <div class="col-lg-4 col-md-4 mb-4">
+          <div class="card animated-card h-100">
+            <img src="images/certifications/1.png" class="card-img-top" alt="Python Certification">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title text-center">Python for Data Science</h5>
+              <p class="card-text">Completed an in-depth course covering NumPy, Pandas, and Scikit-learn to manipulate
+                data and build predictive models.</p>
+              <div class="mt-auto text-center">
+                <a href="#" target="_blank" class="btn btn-secondary btn-sm">View Course</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-4 mb-4">
+          <div class="card animated-card h-100">
+            <img src="images/certifications/2.png" class="card-img-top" alt="Data Visualization Certification">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title text-center">Data Visualization with Power BI</h5>
+              <p class="card-text">Mastered Power BI for creating compelling, interactive dashboards and reports that
+                translate complex data into clear stories.</p>
+              <div class="mt-auto text-center">
+                <a href="#" target="_blank" class="btn btn-secondary btn-sm">View Course</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-4 mb-4">
+          <div class="card animated-card h-100">
+            <img src="images/certifications/3.png" class="card-img-top" alt="SQL Certification">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title text-center">Advanced SQL</h5>
+              <p class="card-text">Focused on advanced querying techniques, including window functions, CTEs, and
+                performance optimization for large datasets.</p>
+              <div class="mt-auto text-center">
+                <a href="#" target="_blank" class="btn btn-secondary btn-sm">View Course</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <div class="row justify-content-center">
+        <div class="col-lg-4 col-md-4 mb-4">
+          <div class="card animated-card h-100">
+            <img src="images/certifications/4.png" class="card-img-top" alt="Data Storytelling Certification">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title text-center">Data Storytelling & Reporting</h5>
+              <p class="card-text">Learned to structure analytical findings into a compelling narrative, ensuring insights
+                are understood and acted upon by stakeholders.</p>
+              <div class="mt-auto text-center">
+                <a href="#" target="_blank" class="btn btn-secondary btn-sm">View Course</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-4 mb-4">
+          <div class="card animated-card h-100">
+            <img src="images/certifications/5.png" class="card-img-top" alt="Machine Learning Course">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title text-center">Machine Learning Foundations</h5>
+              <p class="card-text">Explored core ML concepts including regression, classification, and clustering
+                algorithms using Python and Scikit-learn.</p>
+              <div class="mt-auto text-center">
+                <a href="#" target="_blank" class="btn btn-secondary btn-sm">View Course</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-4 mb-4">
+          <div class="card animated-card h-100">
+            <img src="images/certifications/6.png" class="card-img-top" alt="Cloud Computing Course">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title text-center">AWS for Data Professionals</h5>
+              <p class="card-text">Gained foundational knowledge of cloud data services on AWS, including S3 for storage
+                and RDS for database management.</p>
+              <div class="mt-auto text-center">
+                <a href="#" target="_blank" class="btn btn-secondary btn-sm">View Course</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+    </div>
+  </section>
+
+  <section id="contact" class="contact-section">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="contact-title">Contact Me</h2>
+        <p class="contact-subtitle">Below are the details to reach out to me!</p>
+      </div>
+
       <div class="row">
-        <div class="col-lg-6">
-          <p><i class="fas fa-envelope"></i> janyamehta75@gmail.com</p>
+        <div class="col-md-3 text-center contact-item">
+          <div class="contact-icon">
+            <i class="fab fa-github"></i>
+          </div>
+          <h5>Github</h5>
+          <p>More Projects</p>
         </div>
-        <div class="col-lg-6">
-          <p><i class="fas fa-phone"></i> 415xxxxxxx</p>
+
+        <div class="col-md-3 text-center contact-item">
+          <div class="contact-icon">
+            <i class="fab fa-linkedin-in"></i>
+          </div>
+          <h5>LinkedIn</h5>
+          <p><a href="www.linkedin.com/in/janyamehta" target="_blank">Janya Mehta</a></p>
+        </div>
+
+        <div class="col-md-3 text-center contact-item">
+          <div class="contact-icon">
+            <i class="fas fa-paper-plane"></i>
+          </div>
+          <h5>Email Address</h5>
+          <p><a href="mailto:janyamehta75@gmail.com">janyamehta75@gmail.com</a></p>
+        </div>
+
+        <div class="col-md-3 text-center contact-item">
+          <div class="contact-icon">
+            <i class="fas fa-download"></i>
+          </div>
+          <h5>Download Resume</h5>
+          <p><a href="path/to/your/resume.pdf" download>Download Link</a></p>
         </div>
       </div>
-      <div class="row justify-content-center mt-4">
-        <div class="col-lg-2 col-md-4 col-4 mb-4">
-          <a href="https://linkedin.com/in/yourusername" target="_blank">
-            <img src="icons/linkedin.png" alt="LinkedIn" class="social-icon">
-            <div>LinkedIn</div>
-          </a>
-        </div>
-        <div class="col-lg-2 col-md-4 col-4 mb-4">
-          <a href="https://twitter.com/yourusername" target="_blank">
-            <img src="icons/twitter.png" alt="Twitter" class="social-icon">
-            <div>Twitter</div>
-          </a>
-        </div>
-        <div class="col-lg-2 col-md-4 col-4 mb-4">
-          <a href="https://github.com/yourusername" target="_blank">
-            <img src="icons/github.png" alt="GitHub" class="social-icon">
-            <div>GitHub</div>
-          </a>
-        </div>
+
+      <div class="text-center mt-5 pt-4">
+        <p class="question-text">Have a Question?</p>
+        <a href="mailto:janya.mehta@example.com" class="cta-button">CLICK HERE</a>
       </div>
+
+
     </div>
   </section>
 
